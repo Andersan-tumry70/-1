@@ -9,7 +9,7 @@
 
 using namespace std;
 
-void input(ifstream& ist, vector <Nedv>& nedvs) {
+void input(istream& ist, vector <Nedv>& nedvs) {
     while (false == ist.eof()){
         Nedv nedv;
         ist >> nedv;
@@ -27,7 +27,7 @@ void output(vector <Nedv> nedvs) {
 int main()
 {
     setlocale(0, "Rus");
-    ifstream ist("in.txt");
+    istream ist("in.txt");
     vector <Nedv> nedvs;
 
     input(ist, nedvs);
