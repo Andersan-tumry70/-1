@@ -10,7 +10,7 @@ ostream& operator << (ostream& ost, Nedv& nedv)
     return ost;
 }
 
-ifstream& operator >> (ifstream& ist, Nedv& nedv) {
+istream& operator >> (istream& ist, Nedv& nedv) {
     ist >> nedv.owner;
     ist >> nedv.data >> nedv.price;
     return ist;
