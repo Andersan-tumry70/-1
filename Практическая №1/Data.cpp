@@ -1,37 +1,19 @@
+#include "Data.h"
 #include <iostream>
 #include <fstream>
-#include <string>
-#include <vector>
-#include <clocale>
-
-#include "Data.h"
-#include "Nedv.h"
 
 using namespace std;
 
-void input(ifstream& ist, vector <Nedv>& nedvs) {
-    while (false == ist.eof()){
-        Nedv nedv;
-        ist >> nedv;
-        nedvs.push_back(nedv);
+ifstream& operator >> (ifstream& ist, Data& data) {
+     ist >> data.year;
+     ist.get();
+     ist >> data.month;
+     ist.get();
+     ist >> data.day;
+     return ist;
+}
+
+ostream& operator<< (ostream& ost, Data& data) {
+    ost << data.year << "." << data.month << "." << data.day;
+    return ost;
     }
-}
-
-void output(vector <Nedv> nedvs) {
-    for (Nedv nedv : nedvs){
-        cout << nedv;
-    }
-}
-
-
-int main()
-{
-    setlocale(0, "Rus");
-    ifstream ist("in.txt");
-    vector <Nedv> nedvs;
-
-    input(ist, nedvs);
-    output(nedvs);
-
-    return 0;
-}
