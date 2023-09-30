@@ -14,4 +14,4 @@ struct Nedv
 
 ostream& operator << (ostream& ost, Nedv& nedv);
 
-istream& operator >> (istream& ist, Nedv& nedv);
+ifstream& operator >> (ifstream& ist, Nedv& nedv);
