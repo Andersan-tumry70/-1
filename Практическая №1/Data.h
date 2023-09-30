@@ -13,7 +13,7 @@ struct Data
     int year;
 };
 
-istream& operator >> (istream& ist, Data& data);
+ifstream& operator >> (ifstream& ist, Data& data);
 ostream& operator << (ostream& ost, Data& data);
 
 #endif // DATE_H
