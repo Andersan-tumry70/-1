@@ -4,7 +4,7 @@
 
 using namespace std;
 
-ifstream& operator >> (ifstream& ist, Data& data) {
+istream& operator >> (istream& ist, Data& data) {
      ist >> data.year;
      ist.get();
      ist >> data.month;
